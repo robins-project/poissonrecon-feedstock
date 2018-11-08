@@ -1,0 +1,32 @@
+{% set name = "poissonrecon" %}
+{% set version = "master" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/mkazhdan/PoissonRecon/archive/{{ version }}.tar.gz
+  sha256: 10456f476176f9b4594c5cee25b04fc4257f4e320af7c3c381835b2672357b4f
+
+build:
+    number: 0
+
+# requirements:
+  # build:
+    # - {{ compiler("c") }}
+    # - {{ compiler("cxx") }}
+
+test:
+  commands:
+    - PoissonRecon --help
+
+about:
+  home: http://www.cs.jhu.edu/~misha
+  license: MIT
+  summary: Poisson Surface Reconstruction
+
+extra:
+  recipe-maintainers:
+    - v-turin
