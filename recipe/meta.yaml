@@ -1,5 +1,6 @@
 {% set name = "poissonrecon" %}
-{% set version = "master" %}
+{% set version = "v10.04" %}
+{% set commit = "ff275f3a71d5d8017467008ad15075af328fb1e8" %}
 
 package:
   name: {{ name }}
@@ -7,8 +8,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/mkazhdan/PoissonRecon/archive/{{ version }}.tar.gz
-  sha256: 10456f476176f9b4594c5cee25b04fc4257f4e320af7c3c381835b2672357b4f
+  url: https://github.com/mkazhdan/PoissonRecon/archive/{{ commit }}.tar.gz
+  sha256: af6d034db7f6adab322237f2a241f4c3707c4ccb93c459f45a9009963d08a82f
 
 build:
     number: 0
